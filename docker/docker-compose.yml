@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  lego_loam:
+    build: .
+    container_name: lego_loam_container
+    volumes:
+      - ../src:/root/legoloam_ws/src
+      - ../bags:/root/legoloam_ws/bags
+      - /tmp/.X11-unix:/tmp/.X11-unix  # ← mount X11 socket
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    network_mode: host       # ← penting agar DISPLAY bisa sinkron
+    stdin_open: true
+    tty: true
+
