@@ -1,0 +1,5 @@
+please git clone from the LeGO-LOAM git repository that I have provided below
+attention: you must git clone in the "src" folder
+
+use command :
+git clone https://github.com/RobustFieldAutonomyLab/LeGO-LOAM.git
